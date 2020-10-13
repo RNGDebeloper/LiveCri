@@ -1,1 +1,1 @@
-worker: python3 InstantMail.py
+worker: python3 CricBot.py

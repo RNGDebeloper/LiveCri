@@ -14,15 +14,14 @@ def refresh():
     scorecard = c.scorecard(mid=mid)
     matchinfo = c.matchinfo(mid=mid)
     commentary = c.commentary(mid=mid)
-    result = {
-        "matches": matches,
-        "livescore": livescore,
-        "scorecard": scorecard,
-        "matchinfo": matchinfo,
-        "commentary": commentary
-    }
-    res = json.dumps(result, indent=4)
-    return res
+    result = {}
+    result['matches'] = matches
+    result['livescore']= livescore
+    result['scorecard']= scorecard
+    result['matchinfo']= matchinfo
+    result['commentary']= commentary
+    return result
+
 def start(update, context):
     update.message.reply_text("Welcome to Cricket Bot\n\n/info to get match information\n/score to get the live score")
 

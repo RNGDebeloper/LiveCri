@@ -1,4 +1,4 @@
-# InstantMailBot
+# Live Cricket Bot
 A telegram bot to create instant mails
 
 Link: 

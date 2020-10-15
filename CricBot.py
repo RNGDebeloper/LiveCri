@@ -2,6 +2,7 @@ from pycricbuzz import Cricbuzz
 import logging
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, ConversationHandler
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',level=logging.INFO)
+import json
 
 logger = logging.getLogger(__name__)
 def refresh():
@@ -20,7 +21,8 @@ def refresh():
         "matchinfo": matchinfo,
         "commentary": commentary
     }
-    return result
+    res = json.dumps(result, indent=4)
+    return res
 def start(update, context):
     update.message.reply_text("Welcome to Cricket Bot\n\n/info to get match information\n/score to get the live score")
 

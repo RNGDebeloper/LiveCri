@@ -47,7 +47,7 @@ def info(update, context):
     update.message.reply_text(f'Match No:  {result["matches"]["mnum"]}\nMatch State:  {result["matches"]["mchstate"]}\nMatch Status:  {result["matches"]["status"]}\nToss:  {result["matches"]["toss"]}\nLocation:  {result["matches"]["venue_location"]}\n\n{t1_name} Squad: {team1}\n\n{t2_name} Squad: {team2}')
 
 def main():
-    updater = Updater("1357838884:AAFxrvLzw-g2i4j2mTsXw1z8rbrgAj4dq34", use_context=True)
+    updater = Updater("6881938858:AAHxjQCupjXOrP3FjRUJljAEAty-U7iFGUg", use_context=True)
     dp = updater.dispatcher
     dp.add_handler(CommandHandler("start", start))
     dp.add_handler(CommandHandler("score", score))
